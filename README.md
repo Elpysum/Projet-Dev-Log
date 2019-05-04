@@ -7,7 +7,7 @@
 ### Contributors : Anas, Ryma and Luana 
 ### M1 Biostatistiques
 
-### Subject : [`TP1`](http://josephsalmon.eu/enseignement/Montpellier/HMMA238/TPnote.pdf)
+### Subject : _[TP1](http://josephsalmon.eu/enseignement/Montpellier/HMMA238/TPnote.pdf)
 
 
 ###########################################################################################
