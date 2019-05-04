@@ -1,4 +1,4 @@
-# ######################################################### Projet-Dev-Log ############################################################# #
+#                                                           Projet-Dev-Log 
 #                                                  Projet S2 Développement Logiciel
  
 #                                          This is the S2 "développement logiciel"'s project.
@@ -9,7 +9,7 @@
 ### Subject : http://josephsalmon.eu/enseignement/Montpellier/HMMA238/TPnote.pdf
 
 
-# ####################################################################################################################################### #
+#############################################################################################
 
 ###  Protocole : 
 
@@ -21,15 +21,11 @@
     
 - Les ennoncées et les questions des exercices se trouvent dans le "subject", plus haut et réecrites dans le fichier notebook.ipynb. 
 
-# - Attaque du premier exercice - LE JEU DE LA VIE
+#### - Attaque du premier exercice - LE JEU DE LA VIE
 
 
 
-# - Attaque du deuxième exercice - REGRESSION LOGISTIQUE
-
-
-
-
+#### - Attaque du deuxième exercice - REGRESSION LOGISTIQUE
 
 
 
@@ -37,4 +33,8 @@
 
 
 
-# ################################################################ FIN ############################################################### #
+
+
+
+
+#  FIN  #
