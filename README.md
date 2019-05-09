@@ -5,7 +5,7 @@
 ###                                          This is the S2 "développement logiciel"'s project.
 
 #### Contributors : Anas, Ryma and Luana 
-#### Professor :
+#### Professor : Joseph Salmon
 #### M1 Biostatistiques
 #### HMMA 238
 
