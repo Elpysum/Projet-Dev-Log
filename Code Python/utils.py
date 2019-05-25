@@ -56,6 +56,8 @@ Cette fonction affiche une simulation de 0 à 9 itérations pour une matrice Z d
 
 
 
+import numpy as np
+import matplotlib.pyplot as plt
 
 def step_i(Z_initial, iter = 0):
     plt.figure(figsize = (10, 10))
