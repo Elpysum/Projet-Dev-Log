@@ -98,3 +98,17 @@ def iteration_jeu_rapide(Z):
     return Z
 
 ########################################################### EXERCICE 2 #########################################################
+
+def fig_digit(x, w, alpha):
+    """
+    Arguments : x un vecteur associé à une image, w un vecteur des coefficiens de régression  et le pas alpha un réel de 0 à 100 (avec alpha = 0 : x_mod = x)
+
+    La fonction transforme une image x par l'opération donnée dans l'énoncé, puis affiche son image ainsi que l'image avant la transformation.
+    """
+
+
+    x_mod = x.reshape(784,1) - alpha * np.dot(w.T,x) * w / np.linalg.norm(w)**2
+    
+
+    plt.imshow(x_mod.reshape(28,28))
+    plt.title("Image transformée")
