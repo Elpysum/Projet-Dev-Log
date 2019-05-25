@@ -1,5 +1,6 @@
 # Voici les codes Python :
 
+############################################### EXERCICE 1
 ## Première fonction 
 def calcul_nb_voisins(Z):
     forme = len(Z), len(Z[0])
@@ -175,3 +176,6 @@ pw.interact(step_i, Z_initial = pw.fixed(Z_huge) , iter = (0, 30, 1))
 import ipywidgets as pw
 
 pw.interact(step_i, Z_initial = pw.fixed(Z_huge) , iter = (0, 30, 1))
+
+
+############################################### EXERCICE 2
