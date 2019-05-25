@@ -7,7 +7,7 @@
 #### Contributors : Anas, Ryma and Luana 
 #### Professor : Joseph Salmon
 #### M1 Biostatistiques
-#### HMMA 238
+
 
 #### Subject : [TP1](http://josephsalmon.eu/enseignement/Montpellier/HMMA238/TPnote.pdf)
 
