@@ -1,6 +1,6 @@
 # Voici les codes Python :
 
-############################################### EXERCICE 1
+########################################################### EXERCICE 1 #########################################################
 ## Première fonction 
 def calcul_nb_voisins(Z):
     forme = len(Z), len(Z[0])
@@ -178,4 +178,26 @@ import ipywidgets as pw
 pw.interact(step_i, Z_initial = pw.fixed(Z_huge) , iter = (0, 30, 1))
 
 
-############################################### EXERCICE 2
+########################################################### EXERCICE 2 #########################################################
+
+from sklearn.datasets import fetch_mldata
+from random import randint
+#from sklearn.datasets import fetch_openml 
+
+mnist = fetch_mldata('MNIST original')
+X = mnist.data.astype('float64')
+y = mnist.target
+
+cluster_3 = np.array(y==3)
+cluster_7 = np.array(y==7)
+
+X_37 = X[cluster_3 + cluster_7]
+y_37 = y[cluster_3 + cluster_7]
+
+
+plt.figure(figsize=(20,10))
+for i in range(10):
+    plt.subplot(2,5,i+1)
+    plt.imshow((X_37[randint(0,len(X_37)-1)]).reshape(28,28))
+    
+    
