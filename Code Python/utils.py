@@ -1,8 +1,16 @@
 # Voici les codes Python :
+# Ces codes seront appelés depuis le Jupyter Notebook.
 
 ########################################################### EXERCICE 1 #########################################################
 ## Première fonction 
 def calcul_nb_voisins(Z):
+    """
+    Arguments : 
+    - Z = une liste de listes
+
+    La fonction calcule le nombre de cellules voisines vivantes de chaque autre cellule.
+    """
+    
     forme = len(Z), len(Z[0])
     N = [[0, ] * (forme[0]) for i in range(forme[1])]
     for x in range(1, forme[0] - 1):
@@ -12,18 +20,23 @@ def calcul_nb_voisins(Z):
             + Z[x-1][y+1]+Z[x][y+1]+Z[x+1][y+1]
     return N
   
-
-
-
+## Deuxième fonction
 def iteration_jeu(Z):
+    """
+    Arguments : 
+    - Z = une liste de listes
+    
+    Propriétés : 
+    - On parcourt avec la boucle for chaque cellule de Z avec son nombre de voisins vivants.
+    - Si une cellule vivante a 0, 1 ou 4 voisins vivants on lui affecte la valeur 0 (mort).
+    - Si une cellule morte a exactement 3 voisins vivants on lui affecte 1 (naissance).
+    - Tout autre cas garde la meme valeur.
+    
+    Cette fonction fait donc une simulation d'un tour du jeu pour une liste Z donnée.
+    """
+    
     forme = len(Z), len(Z[0])
     N = calcul_nb_voisins(Z)
-    """
-    On parcourt avec la boucle for chaque cellule de Z avec son nombre de voisins vivants.
-    Si une cellule vivante a 0, 1 ou 4 voisins vivants on lui affecte la valeur 0 (mort).
-    Si une cellule morte a exactement 3 voisins vivants on lui affecte 1 (naissance).
-    Tout autre cas garde la meme valeur.
-    """
     for x in range(1,forme[0]-1):
         for y in range(1,forme[1]-1):
             if Z[x][y] == 1 and (N[x][y] < 2 or N[x][y] > 3):
@@ -31,14 +44,18 @@ def iteration_jeu(Z):
             elif Z[x][y] == 0 and N[x][y] == 3:
                 Z[x][y] = 1
     return Z
-"""
-Cette fonction fait donc une simulation d'un tour du jeu pour une matrice Z donnée.
-"""
 
 
 
-## On créé une fonction 
+## Troisième fonction
 def iterations_09(Z):
+    """
+    Arguments : 
+    - Z = une liste de listes
+    
+    Cette fonction affiche une simulation de 0 à 9 itérations pour une liste Z de n'importe quelle taille, sur 2 lignes et 5 colonnes.
+    
+    """
     plt.subplots(figsize=(15,10))
     for i in range(10):
         ax = plt.subplot(2,5,i+1)
@@ -50,29 +67,18 @@ def iterations_09(Z):
         Z = iteration_jeu(Z) 
 
     plt.show()
-"""
-Cette fonction affiche une simulation de 0 à 9 itérations pour une matrice Z de n'importe qu'elle taille. 
-"""
 
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-def step_i(Z_initial, iter = 0):
-    plt.figure(figsize = (10, 10))
-    Z_i = np.array(Z_initial)
-    for i in range(iter):
-        Z_i = iteration_jeu(Z_i)
-    
-    plt.imshow(Z_i, extent=[0,len(Z_i[0]),0,len(Z_i)])
-    plt.grid(True)
-    plt.title("Affichage de l'itération " + str(iter))
-    
-
+## Quatrième fonction
 from numba import jit
 @jit(nopython=True)
 def calcul_nb_voisins_rapide(Z):
+    """
+    Arguments : 
+    - Z = une liste de listes
+
+    La fonction calcule le nombre de cellules voisines vivantes de chaque autre cellule, mais d'une façon plus rapide.
+    """
     forme = len(Z), len(Z[0])
     N = [[0, ] * (forme[0]) for i in range(forme[1])]
     for x in range(1, forme[0] - 1):
@@ -83,9 +89,15 @@ def calcul_nb_voisins_rapide(Z):
     return N
 
 
-
 @jit(nopython=True)
 def iteration_jeu_rapide(Z):
+    """
+    Arguments : 
+    - Z = une liste de listes
+    
+    Cette fonction fait donc une simulation d'un tour du jeu pour une liste Z donnée, d'une manière plus rapide.
+    
+    """
     forme = len(Z), len(Z[0])
     N = calcul_nb_voisins_rapide(Z)
 
@@ -97,11 +109,38 @@ def iteration_jeu_rapide(Z):
                 Z[x][y] = 1
     return Z
 
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def step_i(Z_initial, iter):
+    """
+    Arguments : 
+    - Z_initial = une liste de listes initiale
+    - iter = nombre d'iterations 
+    
+    Cette fonction affiche l'étape i (choisie par l'utilisateur) du jeu de la vie, pour une matrice Z.
+    """
+    
+    plt.figure(figsize = (10, 10))
+    Z_i = np.array(Z_initial)
+    for i in range(iter):
+        Z_i = iteration_jeu(Z_i)
+    
+    plt.imshow(Z_i, extent=[0,len(Z_i[0]),0,len(Z_i)])
+    plt.grid(True)
+    plt.title("Affichage de l'itération " + str(iter)) 
+
+
+
 ########################################################### EXERCICE 2 #########################################################
 
 def fig_digit(x, w, alpha):
     """
-    Arguments : x un vecteur associé à une image, w un vecteur des coefficiens de régression  et le pas alpha un réel de 0 à 100 (avec alpha = 0 : x_mod = x)
+    Arguments : 
+    - x = un vecteur associé à une image
+    - w = un vecteur des coefficiens de régression
+    - alpha (ou le pas) = un réel de 0 à 100 (avec alpha = 0 : x_mod = x)
 
     La fonction transforme une image x par l'opération donnée dans l'énoncé, puis affiche son image ainsi que l'image avant la transformation.
     """
