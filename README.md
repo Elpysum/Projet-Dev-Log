@@ -3,7 +3,7 @@
 ##                                                                Python
  
 
-#### Contributeurs : Anas, Ryma and Luana 
+#### Contributeurs : Anas, Ryma et Luana 
 #### Professeur : Joseph Salmon
 #### M1 Biostatistiques S2 - 2018/2019
 
