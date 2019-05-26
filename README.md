@@ -1,11 +1,11 @@
 ###########################################################################################
 #                                                 Projet - Développement Logiciel - HMMA238
-##                                                             Python
+##                                                                Python
  
 
 #### Contributeurs : Anas, Ryma and Luana 
 #### Professeurr : Joseph Salmon
-#### M1 Biostatistiques S2
+#### M1 Biostatistiques S2 - 2018/2019
 
 
 #### Sujet : [TP1](http://josephsalmon.eu/enseignement/Montpellier/HMMA238/TPnote.pdf)
