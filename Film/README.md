@@ -1,2 +1,2 @@
 > - Ce fichier comprend : 
->     - le film .mp4, pour l'exercice 2
+>     - un exemple de film animation.mp4, pour l'exercice 2
