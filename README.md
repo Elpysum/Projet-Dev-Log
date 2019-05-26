@@ -4,7 +4,7 @@
  
 
 #### Contributeurs : Anas, Ryma and Luana 
-#### Professeurr : Joseph Salmon
+#### Professeur : Joseph Salmon
 #### M1 Biostatistiques S2 - 2018/2019
 
 
