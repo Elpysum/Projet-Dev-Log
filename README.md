@@ -29,7 +29,14 @@
 
 #### - Attaque du premier exercice - LE JEU DE LA VIE
 
+> - Courte description : 
+>      - constitue l'exemple d'un automate cellulaire
+>      - c'est un jeu à zéro joueur
+>      - pour plus de détails, appuyez [ici](https://fr.wikipedia.org/wiki/Jeu_de_la_vie)
 
+> - Protocole : 
+>      - implémentation sans numpy
+>      - implémentation avec numba
 
 #### - Attaque du deuxième exercice - REGRESSION LOGISTIQUE
 
