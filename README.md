@@ -36,7 +36,7 @@
 
 > - Protocole : 
 >      - réponse aux questions avec : 
->         - implémentation sans numpy
+>         - implémentation sans numpy 
 >         - implémentation avec numba
 
 #### - Attaque du deuxième exercice - REGRESSION LOGISTIQUE
