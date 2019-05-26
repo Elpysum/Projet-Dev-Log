@@ -1,5 +1,5 @@
 ###########################################################################################
-#                                                 Projet - Développement Logiciel
+#                                                 Projet - Développement Logiciel - HMMA238
 ##                                                             Python
  
 
