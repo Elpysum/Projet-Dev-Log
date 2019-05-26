@@ -51,9 +51,9 @@ def iteration_jeu(Z):
 def iterations_09(Z):
     """
     Arguments : 
-    - Z = une liste de listes
+    - Z = une liste de listes (carrée)
     
-    Cette fonction affiche une simulation de 0 à 9 itérations pour une liste Z de n'importe quelle taille, sur 2 lignes et 5 colonnes.
+    Cette fonction affiche une simulation de 0 à 9 itérations pour un Z de n'importe quelle taille, sur 2 lignes et 5 colonnes.
     
     """
     plt.subplots(figsize=(15,10))
@@ -122,7 +122,7 @@ def step_i(Z_initial, iter):
     Cette fonction affiche l'étape i (choisie par l'utilisateur) du jeu de la vie, pour une matrice Z.
     """
     
-    plt.figure(figsize = (10, 10))
+    plt.figure(figsize = (5, 5))
     Z_i = np.array(Z_initial)
     for i in range(iter):
         Z_i = iteration_jeu(Z_i)
@@ -151,3 +151,19 @@ def fig_digit(x, w, alpha):
 
     plt.imshow(x_mod.reshape(28,28))
     plt.title("Image transformée")
+    
+    
+def reglog(x, w, alpha):
+    """
+    Arguments : 
+    - x = un vecteur associé à une image
+    - w = un vecteur des coefficiens de régression
+    - alpha (ou le pas) = un réel de 0 à 100 (avec alpha = 0 : x_mod = x)
+
+    La fonction transforme une liste d'incidence d'une image par l'opération donnée dans l'énoncé et renvoi une nouvelle liste transformée.
+    """
+
+
+    return((x.reshape(784,1) - alpha * np.dot(w.T, x.reshape(784,1)) * w / np.linalg.norm(w)**2).reshape(28,28))
+
+
