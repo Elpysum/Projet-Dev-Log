@@ -35,12 +35,24 @@
 >      - pour plus de détails, appuyez [ici](https://fr.wikipedia.org/wiki/Jeu_de_la_vie)
 
 > - Protocole : 
->      - implémentation sans numpy
->      - implémentation avec numba
+>      - réponse aux questions avec : 
+>         - implémentation sans numpy
+>         - implémentation avec numba
 
 #### - Attaque du deuxième exercice - REGRESSION LOGISTIQUE
 
+> - Courte description : 
+>      - on prend la base de données MNIST
+>      - celle-ci représente des chiffres numérisés
+>      - on connaît une étiquette associée parmi les chiffres (0,1,...,9)
 
+> - Protocole : 
+>      - charger la base de données
+>      - garder que les cas des chiffres 3 et 7
+>      - utiliser la fonction LogisticRegression pour apprendre un modèle de classiffication sur l'intégralité des données
+>      - créer un widget
+>      - créer un film
+>      - faire une ACP
 
 
 
