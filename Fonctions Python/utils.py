@@ -89,6 +89,8 @@ def calcul_nb_voisins_rapide(Z):
     return N
 
 
+
+## Cinquième fonction
 @jit(nopython=True)
 def iteration_jeu_rapide(Z):
     """
@@ -110,6 +112,7 @@ def iteration_jeu_rapide(Z):
     return Z
 
 
+## Sixième fonction
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -135,6 +138,8 @@ def step_i(Z_initial, iter):
 
 ########################################################### EXERCICE 2 #########################################################
 
+
+## Septième fonction
 def fig_digit(x, w, alpha):
     """
     Arguments : 
@@ -153,6 +158,7 @@ def fig_digit(x, w, alpha):
     plt.title("Image transformée")
     
     
+## Huitième fonction    
 def reglog(x, w, alpha):
     """
     Arguments : 
